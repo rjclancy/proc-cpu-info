@@ -15,6 +15,8 @@ jobs:
       - run: mvn -B clean install --file pom.xml
 
   deploy:
+    runs-on: ubuntu-latest
+    steps:
     - name: Publish to Docker Hub
       uses: docker/build-push-action@v1
       with:
