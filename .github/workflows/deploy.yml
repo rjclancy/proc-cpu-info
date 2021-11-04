@@ -12,12 +12,7 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 11
-      - run: mvn -B clean install --file pom.xml
-      - run: mkdir target && cp app/target/smallwindow-21-0.0.1-SNAPSHOT.jar target
-      - uses: actions/upload-artifact@v2
-        with:
-         name: Package
-         path: target
+      - run: mvn -B clean package --file pom.xml
 
   deploy:
     runs-on: ubuntu-latest
