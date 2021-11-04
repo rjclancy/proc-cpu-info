@@ -2,7 +2,7 @@ name: Continuous deployment - Assignment
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   test:
